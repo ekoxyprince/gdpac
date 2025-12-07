@@ -76,15 +76,16 @@ const Partnership = () => (
         </div>
       </div>
       <p className="mt-3 text-xs text-blue-100 max-w-2xl">
-        Replace these demo images with actual partner logos as collaborations are
-        confirmed. The slider loops infinitely to showcase the breadth of
-        support.
+        This is just a demo partnership slider as partners are provided it can
+        be updated or remove per request
       </p>
     </section>
 
     <section className="sr-section max-w-6xl mx-auto px-6 pb-14 grid md:grid-cols-3 gap-6 text-sm">
       <article className="bg-white/5 border border-white/20 rounded-2xl p-5 space-y-2 backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1">
-        <h2 className="font-semibold text-sm text-green-200">Why partner with GDPAC</h2>
+        <h2 className="font-semibold text-sm text-green-200">
+          Why partner with GDPAC
+        </h2>
         <p className="text-blue-50">
           GDPAC is a trusted, non-partisan institution working at the
           intersection of governance, data, and civic innovation.
@@ -96,7 +97,9 @@ const Partnership = () => (
         </p>
       </article>
       <article className="bg-white/5 border border-white/20 rounded-2xl p-5 space-y-2 backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1">
-        <h2 className="font-semibold text-sm text-green-200">Types of support</h2>
+        <h2 className="font-semibold text-sm text-green-200">
+          Types of support
+        </h2>
         <p className="text-blue-100">
           We welcome technical and financial contributions in data science,
           policy research, civic technology, and capacity building.
@@ -107,14 +110,16 @@ const Partnership = () => (
         </p>
       </article>
       <article className="bg-white/5 border border-white/20 rounded-2xl p-5 space-y-2 backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1">
-        <h2 className="font-semibold text-sm text-green-200">Bank details (donations)</h2>
+        <h2 className="font-semibold text-sm text-green-200">
+          Bank details (donations)
+        </h2>
         <p className="text-blue-100 text-xs">
-          <span className="font-semibold">Account Name:</span> Governance &amp; Policy
-          Analysis Centre (GDPAC)
+          <span className="font-semibold">Account Name:</span> Governance &amp;
+          Policy Analysis Centre (GDPAC)
         </p>
         <p className="text-blue-100 text-xs">
-          <span className="font-semibold">Bank:</span> Fidelity Bank Plc – Polo Park
-          Branch, Enugu
+          <span className="font-semibold">Bank:</span> Fidelity Bank Plc – Polo
+          Park Branch, Enugu
         </p>
         <p className="text-blue-100 text-xs">
           <span className="font-semibold">Account Number:</span> 5601562851
@@ -123,8 +128,8 @@ const Partnership = () => (
           <span className="font-semibold">SWIFT/BIC:</span> FIDTNGLAXXX
         </p>
         <p className="text-blue-100 text-xs">
-          <span className="font-semibold">Reference:</span> "GDPAC Support – [Your
-          Name]"
+          <span className="font-semibold">Reference:</span> "GDPAC Support –
+          [Your Name]"
         </p>
       </article>
     </section>
