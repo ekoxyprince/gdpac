@@ -58,6 +58,33 @@ const Team = () => (
         </p>
       </article>
     </section>
+
+    <section className="sr-section max-w-6xl mx-auto px-6 pb-16 text-sm md:text-base">
+      <div className="bg-blue-900 text-blue-50 rounded-3xl px-6 py-8 md:px-10 md:py-10 grid md:grid-cols-3 gap-6">
+        <div className="md:col-span-2 space-y-2">
+          <h2 className="text-2xl font-bold">How we work together</h2>
+          <p>
+            The GDPAC team collaborates across analytics, policy, technology, and
+            field engagement to ensure that data translates into real-world
+            reform.
+          </p>
+        </div>
+        <ul className="space-y-2 text-xs">
+          <li>
+            <span className="font-semibold">Weekly labs:</span> cross-functional
+            sessions to review indicators and dashboards.
+          </li>
+          <li>
+            <span className="font-semibold">Advisory clinics:</span> dedicated
+            office hours with partners and state MDAs.
+          </li>
+          <li>
+            <span className="font-semibold">Ethics review:</span> internal checks
+            on data protection, transparency, and inclusion.
+          </li>
+        </ul>
+      </div>
+    </section>
   </div>
 );
 

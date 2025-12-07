@@ -31,7 +31,7 @@ const Civic = () => (
       </div>
     </section>
 
-    <section className="sr-section max-w-6xl mx-auto px-6 pb-14 grid md:grid-cols-3 gap-6 text-sm">
+    <section className="sr-section max-w-6xl mx-auto px-6 pb-10 grid md:grid-cols-3 gap-6 text-sm">
       <article className="bg-white rounded-2xl border shadow-sm p-5 space-y-2 transition-transform duration-300 hover:-translate-y-1">
         <h2 className="font-semibold text-blue-900">Citizen feedback tools</h2>
         <p className="text-blue-800">
@@ -54,6 +54,33 @@ const Civic = () => (
           and urban areas alike can see, question, and contribute to the data.
         </p>
       </article>
+    </section>
+
+    <section className="sr-section max-w-6xl mx-auto px-6 pb-16 text-sm md:text-base">
+      <div className="bg-blue-900 text-blue-50 rounded-3xl px-6 py-8 md:px-10 md:py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="space-y-2 max-w-xl">
+          <h2 className="text-2xl font-bold">Get involved</h2>
+          <p>
+            Partner with GDPAC to co-host citizen scorecard sessions, town halls,
+            and civic-tech experiments that make governance data more accessible
+            to everyday people.
+          </p>
+        </div>
+        <div className="flex flex-col sm:flex-row gap-3 text-sm font-semibold">
+          <a
+            href="/volunteer"
+            className="px-5 py-2.5 rounded-lg bg-white text-blue-900 shadow hover:bg-blue-50 text-center"
+          >
+            Join the volunteer network
+          </a>
+          <a
+            href="/contact"
+            className="px-5 py-2.5 rounded-lg border border-blue-200 text-blue-50 hover:bg-blue-800 text-center"
+          >
+            Talk to the GDPAC team
+          </a>
+        </div>
+      </div>
     </section>
   </div>
 );

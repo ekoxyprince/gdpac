@@ -1,5 +1,12 @@
 import React from "react";
 import bannerImg from "../assets/gdpac-banner.png";
+import slider1 from "../assets/dashboard-1.png";
+import slider2 from "../assets/dashboard-2.png";
+import slider3 from "../assets/dashboard-3.png";
+import slider4 from "../assets/dashboard-4.png";
+import slider5 from "../assets/dashboard-5.png";
+
+const partnerLogos = [slider1, slider2, slider3, slider4, slider5];
 
 const Partnership = () => (
   <div className="min-h-screen bg-gradient-to-b from-blue-900 via-blue-800 to-green-700 text-white">
@@ -49,6 +56,30 @@ const Partnership = () => (
           className="rounded-2xl shadow-2xl w-full max-w-md object-cover border border-white/20"
         />
       </div>
+    </section>
+
+    <section className="sr-section max-w-6xl mx-auto px-6 pb-10">
+      <h2 className="text-sm md:text-base font-semibold text-green-200 mb-3">
+        Partners &amp; supporters (demo slider)
+      </h2>
+      <div className="partner-slider bg-white/5 border border-white/15 rounded-2xl px-4 py-4">
+        <div className="partner-slider-track">
+          {partnerLogos.concat(partnerLogos).map((logo, idx) => (
+            <div key={idx} className="partner-logo-card">
+              <img
+                src={logo}
+                alt="Partner logo"
+                className="h-10 w-auto object-contain drop-shadow"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+      <p className="mt-3 text-xs text-blue-100 max-w-2xl">
+        Replace these demo images with actual partner logos as collaborations are
+        confirmed. The slider loops infinitely to showcase the breadth of
+        support.
+      </p>
     </section>
 
     <section className="sr-section max-w-6xl mx-auto px-6 pb-14 grid md:grid-cols-3 gap-6 text-sm">

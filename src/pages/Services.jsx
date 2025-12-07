@@ -35,22 +35,23 @@ const Services = () => (
   <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-100 text-blue-900">
     <section className="sr-section max-w-6xl mx-auto px-6 py-14 text-center space-y-3">
       <p className="text-xs font-semibold tracking-[0.25em] text-green-600 uppercase">
-        Services
+        Dashboards
       </p>
       <h1 className="text-3xl md:text-4xl font-bold mt-2">
-        From raw data to decision-ready insight.
+        Flagship dashboards for governance and development.
       </h1>
       <p className="max-w-2xl mx-auto text-blue-800 text-sm md:text-base">
-        Explore how GDPAC helps governments, institutions, and partners turn
-        complex development challenges into clear, actionable intelligence.
+        Explore how GDPACs interactive dashboards turn complex development
+        data into clear, decision-ready insight for leaders, analysts, and
+        citizens.
       </p>
       <p className="max-w-3xl mx-auto text-blue-700 text-xs md:text-sm">
-        We look at our services as an integrated stack—from core analytics
-        platforms and advisory work to capacity building and open data access.
+        Each dashboard is powered by transparent methodologies and updatable
+        datasets, enabling continuous tracking of state performance over time.
       </p>
     </section>
 
-    <section className="sr-section max-w-6xl mx-auto px-6 pb-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+    <section className="sr-section max-w-6xl mx-auto px-6 pb-10 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
       {services.map((s) => (
         <article
           key={s.title}
@@ -72,6 +73,30 @@ const Services = () => (
           </div>
         </article>
       ))}
+    </section>
+
+    <section className="sr-section max-w-6xl mx-auto px-6 pb-16 grid md:grid-cols-2 gap-8 text-sm md:text-base">
+      <div className="space-y-3">
+        <h2 className="text-2xl font-bold text-blue-900">How to access the dashboards</h2>
+        <p className="text-blue-800">
+          Public users can explore demo views of key dashboards, while authorised
+          government and partner accounts can unlock advanced filters, bulk
+          downloads, and administrative tools.
+        </p>
+        <p className="text-blue-800">
+          When ready, connect this page to your authentication and data services
+          so that authorised users can seamlessly move from overview cards into
+          live dashboards.
+        </p>
+      </div>
+      <div className="space-y-3">
+        <h3 className="font-semibold text-blue-900">Suggested next steps</h3>
+        <ul className="list-disc pl-5 space-y-1 text-blue-800">
+          <li>Link each dashboard card to its corresponding protected route.</li>
+          <li>Expose selected indicators publicly for transparency purposes.</li>
+          <li>Document your data sources, refresh cycles, and governance rules.</li>
+        </ul>
+      </div>
     </section>
   </div>
 );

@@ -2,6 +2,10 @@ import React from "react";
 import { FiBarChart2, FiShield, FiHeart, FiUsers } from "react-icons/fi";
 import hero from "../assets/home-hero.png";
 import infographic from "../assets/impact-infographic.png";
+import dashboard1 from "../assets/dashboard-1.png";
+import dashboard2 from "../assets/dashboard-2.png";
+import dashboard3 from "../assets/dashboard-3.png";
+import dashboard4 from "../assets/dashboard-4.png";
 
 const partners = [
   { name: "UNDP", color: "from-sky-500 to-sky-700" },
@@ -52,6 +56,33 @@ const services = [
   },
 ];
 
+const dashboardPreviews = [
+  {
+    title: "SEDI dashboard",
+    image: dashboard1,
+    href: "/dashboard/sedi",
+    tag: "Socioeconomic Development Index",
+  },
+  {
+    title: "GPI dashboard",
+    image: dashboard2,
+    href: "/dashboard/gpi",
+    tag: "Governance Performance Index",
+  },
+  {
+    title: "IEI dashboard",
+    image: dashboard3,
+    href: "/dashboard/iei",
+    tag: "Institutional Efficiency Index",
+  },
+  {
+    title: "Civic sentiment dashboard",
+    image: dashboard4,
+    href: "/dashboard/sentiment",
+    tag: "Citizen feedback & engagement",
+  },
+];
+
 const Home = () => (
   <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-green-50 text-blue-900">
     {/* 1. HERO */}
@@ -89,26 +120,6 @@ const Home = () => (
       />
     </header>
 
-    {/* 2. PARTNERS */}
-    <section className="sr-section py-6 bg-white border-b">
-      <div className="max-w-4xl mx-auto flex flex-col items-center">
-        <div className="text-lg mb-3 font-medium text-gray-700 text-center">
-          Trusted by partners in data-driven governance, policy, and
-          development:
-        </div>
-        <div className="flex flex-wrap gap-4 justify-center">
-          {partners.map((p) => (
-            <div
-              key={p.name}
-              className={`px-4 py-2 rounded-full text-xs md:text-sm font-semibold text-white bg-gradient-to-r ${p.color} shadow-sm flex items-center justify-center`}
-            >
-              {p.name}
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
     {/* 3. FEATURES */}
     <section className="sr-section py-12 px-4">
       <div className="max-w-6xl mx-auto mb-6 text-center space-y-2">
@@ -129,6 +140,57 @@ const Home = () => (
             <p className="text-white/90">{f.desc}</p>
           </div>
         ))}
+      </div>
+    </section>
+
+    {/* 3b. FLAGSHIP DASHBOARDS PREVIEW */}
+    <section className="sr-section py-10 px-4 bg-white border-y">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
+          <div>
+            <h2 className="text-2xl font-bold text-blue-900">Flagship dashboards</h2>
+            <p className="text-sm md:text-base text-blue-800 max-w-xl">
+              Get a quick glimpse of the core GDPAC dashboards tracking
+              socioeconomic development, governance performance, institutional
+              efficiency, and citizen voice.
+            </p>
+          </div>
+          <p className="text-xs md:text-sm text-blue-700 max-w-sm">
+            These previews mirror the dedicated Dashboards page and link into the
+            full analytics experience.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {dashboardPreviews.map((d) => (
+            <article
+              key={d.title}
+              className="bg-blue-50 rounded-2xl border border-blue-100 shadow-sm overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-md transition-transform"
+            >
+              <div className="h-28 bg-blue-100 overflow-hidden">
+                <img
+                  src={d.image}
+                  alt={d.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-4 flex-1 flex flex-col">
+                <span className="inline-block text-[0.65rem] tracking-wide uppercase text-green-600 mb-1">
+                  {d.tag}
+                </span>
+                <h3 className="font-semibold text-sm md:text-base text-blue-900 mb-1">
+                  {d.title}
+                </h3>
+                <a
+                  href={d.href}
+                  className="text-xs md:text-sm text-blue-700 font-semibold mt-auto inline-flex items-center gap-1 hover:text-blue-900"
+                >
+                  Open dashboard
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
 

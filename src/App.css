@@ -112,3 +112,35 @@
 .sedi-kpi-card--avg {
   background-image: linear-gradient(135deg, #451a03, #b45309, #f97316);
 }
+
+/* Partnership slider (infinite marquee) */
+@keyframes partner-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.partner-slider {
+  overflow: hidden;
+}
+
+.partner-slider-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: partner-marquee 30s linear infinite;
+}
+
+.partner-logo-card {
+  min-width: 140px;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(15, 23, 42, 0.5);
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,12 +1,13 @@
 import React from "react";
+import { FiFacebook, FiTwitter, FiInstagram, FiYoutube } from "react-icons/fi";
 import displayImg from "../assets/Display.png";
 
 const Contact = () => (
-  <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-green-700 text-white flex items-center justify-center px-4 py-10">
-    <div className="sr-section max-w-5xl w-full grid md:grid-cols-2 gap-10 bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 md:p-10 shadow-2xl">
+  <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-green-700 text-white px-4 py-10 flex flex-col gap-8 justify-center">
+    <section className="sr-section max-w-5xl w-full mx-auto grid md:grid-cols-2 gap-10 bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 md:p-10 shadow-2xl">
       <div className="space-y-5">
         <p className="text-xs tracking-[0.25em] uppercase text-green-300">
-          Contact
+          Contact &amp; support
         </p>
         <h1 className="text-3xl font-bold leading-tight">
           Lets collaborate on better data and better governance.
@@ -21,6 +22,49 @@ const Contact = () => (
           </div>
           <div>
             <span className="font-semibold">Address:</span> Abuja, Nigeria
+          </div>
+          <div className="mt-3">
+            <p className="text-[0.7rem] uppercase tracking-[0.2em] text-green-300 mb-1">
+              Connect with us
+            </p>
+            <div className="flex items-center gap-3 text-lg">
+              <a
+                href="https://facebook.com/thegdpac"
+                aria-label="GDPAC on Facebook"
+                className="text-blue-100 hover:text-white transition-colors"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FiFacebook />
+              </a>
+              <a
+                href="https://twitter.com/thegdpac"
+                aria-label="GDPAC on Twitter"
+                className="text-blue-100 hover:text-white transition-colors"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FiTwitter />
+              </a>
+              <a
+                href="https://instagram.com/thegdpac"
+                aria-label="GDPAC on Instagram"
+                className="text-blue-100 hover:text-white transition-colors"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FiInstagram />
+              </a>
+              <a
+                href="https://youtube.com/@thegdpac"
+                aria-label="GDPAC on YouTube"
+                className="text-blue-100 hover:text-white transition-colors"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FiYoutube />
+              </a>
+            </div>
           </div>
         </div>
         <img
@@ -82,7 +126,39 @@ const Contact = () => (
           when ready.
         </p>
       </form>
-    </div>
+    </section>
+
+    <section className="sr-section max-w-5xl w-full mx-auto grid md:grid-cols-3 gap-6 text-sm">
+      <div className="bg-white/10 rounded-2xl border border-white/15 p-5">
+        <h2 className="font-semibold mb-1">General enquiries</h2>
+        <p className="text-blue-100 text-xs">
+          For information about dashboards, indices, and demos, contact
+          <span className="font-semibold"> info@gdpac.ng</span>.
+        </p>
+      </div>
+      <div className="bg-white/10 rounded-2xl border border-white/15 p-5">
+        <h2 className="font-semibold mb-1">Partnerships &amp; support</h2>
+        <p className="text-blue-100 text-xs">
+          For collaborations and funding support, email
+          <span className="font-semibold"> partnerships@gdpac.org.ng</span>.
+        </p>
+      </div>
+      <div className="bg-white/10 rounded-2xl border border-white/15 p-5">
+        <h2 className="font-semibold mb-1">Media &amp; speaking</h2>
+        <p className="text-blue-100 text-xs">
+          For interviews, conference talks, or press requests, write to
+          <span className="font-semibold"> media@gdpac.org.ng</span>.
+        </p>
+      </div>
+    </section>
+
+    <section className="sr-section max-w-5xl w-full mx-auto text-[0.7rem] text-blue-100">
+      <p>
+        GDPAC is committed to safeguarding the privacy of stakeholders and
+        complying with applicable data protection regulations. Only share
+        information you are comfortable disclosing via email.
+      </p>
+    </section>
   </div>
 );
 

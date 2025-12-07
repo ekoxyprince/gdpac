@@ -32,16 +32,19 @@ import StateComparison from "./pages/dashboard/StateComparison";
 import DashboardLibrary from "./pages/dashboard/DashboardLibrary";
 import Login from "./pages/Login";
 import { useAuth } from "./AuthContext.jsx";
+import { FiFacebook, FiTwitter, FiInstagram, FiYoutube } from "react-icons/fi";
 
 const navLinks = [
   { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/indices", label: "Indices" },
-  { to: "/services", label: "Services" },
-  { to: "/civic", label: "Civic" },
-  { to: "/research", label: "Research" },
-  { to: "/news", label: "News" },
-  { to: "/contact", label: "Contact" },
+  { to: "/about", label: "About GDPAC" },
+  { to: "/indices", label: "Flagship indices" },
+  { to: "/dashboards", label: "Dashboards" },
+  { to: "/research", label: "Research & Insights" },
+  { to: "/civic", label: "Civic Engagement" },
+  { to: "/partnership", label: "Partnership & Support" },
+  { to: "/team", label: "Team & Advisors" },
+  { to: "/news", label: "News & Events" },
+  { to: "/contact", label: "Contact & Support" },
 ];
 
 function ProtectedRoute({ children }) {
@@ -103,7 +106,7 @@ function Layout() {
             </span>
           </NavLink>
 
-          <nav className="hidden md:flex items-center gap-3 text-sm">
+          <nav className="hidden lg:flex items-center gap-3 text-sm">
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}
@@ -125,26 +128,45 @@ function Layout() {
           <div className="flex items-center gap-3">
             <button
               type="button"
-              className="md:hidden inline-flex items-center justify-center w-9 h-9 rounded-lg border border-blue-100 text-blue-800 hover:bg-blue-50"
+              className="lg:hidden relative inline-flex items-center justify-center w-10 h-10 rounded-full border border-blue-100 bg-white/80 text-blue-900 shadow-sm hover:bg-blue-50 transition-colors"
               onClick={() => setMenuOpen((prev) => !prev)}
-              aria-label="Toggle navigation menu"
+              aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={menuOpen}
+              aria-controls="gdpac-mobile-nav"
             >
-              <span className="block w-4 h-[1.5px] bg-blue-800 mb-1" />
-              <span className="block w-4 h-[1.5px] bg-blue-800" />
+              <span className="sr-only">Toggle navigation</span>
+              <span
+                className={`absolute h-[2px] w-5 rounded-full bg-blue-900 transition-all duration-300 ${
+                  menuOpen ? "translate-y-0 rotate-45" : "-translate-y-1.5"
+                }`}
+              />
+              <span
+                className={`absolute h-[2px] w-5 rounded-full bg-blue-900 transition-opacity duration-200 ${
+                  menuOpen ? "opacity-0" : "opacity-100"
+                }`}
+              />
+              <span
+                className={`absolute h-[2px] w-5 rounded-full bg-blue-900 transition-all duration-300 ${
+                  menuOpen ? "translate-y-0 -rotate-45" : "translate-y-1.5"
+                }`}
+              />
             </button>
           </div>
         </div>
 
         {menuOpen && (
-          <nav className="md:hidden border-t border-blue-100 bg-white/95 backdrop-blur px-4 pb-3 pt-2 text-sm">
-            <div className="flex flex-col gap-1">
+          <nav
+            id="gdpac-mobile-nav"
+            className="lg:hidden border-t border-blue-100 bg-white/95 backdrop-blur shadow-lg text-sm"
+          >
+            <div className="max-w-6xl mx-auto px-4 pb-4 pt-2 flex flex-col gap-1.5">
               {navLinks.map((link) => (
                 <NavLink
                   key={link.to}
                   to={link.to}
                   onClick={() => setMenuOpen(false)}
                   className={({ isActive }) =>
-                    `px-2 py-1.5 rounded-md ${
+                    `px-3 py-2 rounded-lg ${
                       isActive
                         ? "bg-blue-50 text-blue-900 font-semibold"
                         : "text-blue-800 hover:bg-blue-50"
@@ -189,15 +211,58 @@ function Layout() {
             </ul>
           </div>
 
-          <div className="space-y-1">
+          <div className="space-y-2">
             <h3 className="font-semibold text-slate-50 text-xs uppercase tracking-wide">
-              Contact
+              Contact &amp; support
             </h3>
             <p className="text-slate-300">Abuja, Nigeria</p>
             <p className="text-slate-300">info@gdpac.ng</p>
             <p className="text-slate-300 text-[0.7rem]">
               For partnerships: partnerships@gdpac.org.ng
             </p>
+            <div className="mt-3">
+              <h4 className="font-semibold text-slate-50 text-[0.7rem] uppercase tracking-wide mb-1">
+                Connect with us
+              </h4>
+              <div className="flex items-center gap-3 text-lg">
+                <a
+                  href="https://facebook.com/thegdpac"
+                  aria-label="GDPAC on Facebook"
+                  className="text-slate-300 hover:text-white transition-colors"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FiFacebook />
+                </a>
+                <a
+                  href="https://twitter.com/thegdpac"
+                  aria-label="GDPAC on Twitter"
+                  className="text-slate-300 hover:text-white transition-colors"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FiTwitter />
+                </a>
+                <a
+                  href="https://instagram.com/thegdpac"
+                  aria-label="GDPAC on Instagram"
+                  className="text-slate-300 hover:text-white transition-colors"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FiInstagram />
+                </a>
+                <a
+                  href="https://youtube.com/@thegdpac"
+                  aria-label="GDPAC on YouTube"
+                  className="text-slate-300 hover:text-white transition-colors"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FiYoutube />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <div className="border-t border-blue-900 bg-blue-950/95">
@@ -254,6 +319,7 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/dashboards" element={<Services />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/indices" element={<Indices />} />
