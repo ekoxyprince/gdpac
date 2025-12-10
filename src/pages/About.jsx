@@ -10,10 +10,11 @@ const About = () => (
           About GDPAC
         </p>
         <h1 className="text-3xl md:text-4xl font-bold leading-tight">
-          A national platform for data-driven governance and inclusive development.
+          A national platform for data-driven governance and inclusive
+          development.
         </h1>
         <p className="text-blue-800 text-base leading-relaxed">
-          The Governance and Development Performance Analytics Centre (GDPAC)
+          The Governance and Development and Policy Analytics Centre (GDPAC)
           brings together data, institutions, and citizens to track how Nigerias
           states are performing on poverty reduction, service delivery, and
           governance reforms.
@@ -55,10 +56,12 @@ const About = () => (
 
     <section className="sr-section max-w-6xl mx-auto px-6 pb-8 grid md:grid-cols-3 gap-8">
       <div className="md:col-span-1 space-y-2">
-        <h2 className="text-2xl font-bold mb-1 text-blue-900">What we stand for</h2>
+        <h2 className="text-2xl font-bold mb-1 text-blue-900">
+          What we stand for
+        </h2>
         <p className="text-sm text-blue-800">
-          Four core values guide how GDPAC measures, shares, and protects data for
-          everyone—citizens, institutions, and partners.
+          Four core values guide how GDPAC measures, shares, and protects data
+          for everyone—citizens, institutions, and partners.
         </p>
       </div>
       <div className="md:col-span-2 grid sm:grid-cols-2 gap-5 text-sm">

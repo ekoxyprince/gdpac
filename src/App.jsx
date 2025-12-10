@@ -102,7 +102,7 @@ function Layout() {
               GDPAC
             </span>
             <span className="hidden sm:inline text-[0.7rem] text-blue-700 group-hover:text-blue-900 transition-colors">
-              Governance &amp; Development Performance Analytics Centre
+              Governance &amp; Development and Policy Analytics Centre
             </span>
           </NavLink>
 
@@ -195,7 +195,7 @@ function Layout() {
               GDPAC
             </div>
             <p className="font-semibold">
-              Governance &amp; Development Performance Analytics Centre
+              Governance &amp; Development and Policy Analytics Centre
             </p>
             <p className="text-slate-300">
               Transforming governance through data, insight, and innovation.
@@ -218,7 +218,7 @@ function Layout() {
               Contact &amp; support
             </h3>
             <p className="text-slate-300">
-              Suit C6, Bethel Plaza, Garden Avenue, Nigeria.
+              Suit C6, Bethel Plaza, Garden Avenue, Enugu, Nigeria.
             </p>
             <p className="text-slate-300">info@thegdpac.com</p>
             <p className="text-slate-300 text-[0.7rem]">
