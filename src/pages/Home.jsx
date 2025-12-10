@@ -59,7 +59,7 @@ const services = [
 const dashboardPreviews = [
   {
     title: "SEDI dashboard",
-    image: dashboard1,
+    image: dashboard3,
     href: "/dashboard/sedi",
     tag: "Socioeconomic Development Index",
   },
@@ -71,12 +71,12 @@ const dashboardPreviews = [
   },
   {
     title: "IEI dashboard",
-    image: dashboard3,
+    image: dashboard1,
     href: "/dashboard/iei",
     tag: "Institutional Efficiency Index",
   },
   {
-    title: "Civic sentiment dashboard",
+    title: "SEDI dashboard",
     image: dashboard4,
     href: "/dashboard/sentiment",
     tag: "Citizen feedback & engagement",
@@ -125,8 +125,8 @@ const Home = () => (
       <div className="max-w-6xl mx-auto mb-6 text-center space-y-2">
         <h2 className="text-2xl font-bold text-blue-900">Why GDPAC matters</h2>
         <p className="text-sm md:text-base text-blue-800 max-w-3xl mx-auto">
-          In a rapidly changing world, governance must be adaptive, inclusive, and
-          evidence-based. GDPAC exists to ensure that Nigeria’s development
+          In a rapidly changing world, governance must be adaptive, inclusive,
+          and evidence-based. GDPAC exists to ensure that Nigeria’s development
           decisions are guided by facts, not guesswork.
         </p>
       </div>
@@ -148,7 +148,9 @@ const Home = () => (
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
           <div>
-            <h2 className="text-2xl font-bold text-blue-900">Flagship dashboards</h2>
+            <h2 className="text-2xl font-bold text-blue-900">
+              Flagship dashboards
+            </h2>
             <p className="text-sm md:text-base text-blue-800 max-w-xl">
               Get a quick glimpse of the core GDPAC dashboards tracking
               socioeconomic development, governance performance, institutional
@@ -156,8 +158,8 @@ const Home = () => (
             </p>
           </div>
           <p className="text-xs md:text-sm text-blue-700 max-w-sm">
-            These previews mirror the dedicated Dashboards page and link into the
-            full analytics experience.
+            These previews mirror the dedicated Dashboards page and link into
+            the full analytics experience.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -202,7 +204,8 @@ const Home = () => (
             <h2 className="text-2xl font-bold text-blue-800">Our services</h2>
             <p className="text-sm md:text-base text-blue-700 max-w-xl">
               Explore the tools, analytics, and advisory support we provide to
-              governments, institutions, and development partners across Nigeria.
+              governments, institutions, and development partners across
+              Nigeria.
             </p>
           </div>
           <p className="text-xs md:text-sm text-blue-600 max-w-sm">

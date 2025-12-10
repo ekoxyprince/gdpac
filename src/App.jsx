@@ -130,7 +130,9 @@ function Layout() {
               type="button"
               className="lg:hidden relative inline-flex items-center justify-center w-10 h-10 rounded-full border border-blue-100 bg-white/80 text-blue-900 shadow-sm hover:bg-blue-50 transition-colors"
               onClick={() => setMenuOpen((prev) => !prev)}
-              aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-label={
+                menuOpen ? "Close navigation menu" : "Open navigation menu"
+              }
               aria-expanded={menuOpen}
               aria-controls="gdpac-mobile-nav"
             >
@@ -215,10 +217,12 @@ function Layout() {
             <h3 className="font-semibold text-slate-50 text-xs uppercase tracking-wide">
               Contact &amp; support
             </h3>
-            <p className="text-slate-300">Abuja, Nigeria</p>
-            <p className="text-slate-300">info@gdpac.ng</p>
+            <p className="text-slate-300">
+              Suit C6, Bethel Plaza, Garden Avenue, Nigeria.
+            </p>
+            <p className="text-slate-300">info@thegdpac.com</p>
             <p className="text-slate-300 text-[0.7rem]">
-              For partnerships: partnerships@gdpac.org.ng
+              For partnerships: partnerships@thegdpac.com
             </p>
             <div className="mt-3">
               <h4 className="font-semibold text-slate-50 text-[0.7rem] uppercase tracking-wide mb-1">
@@ -271,7 +275,7 @@ function Layout() {
               &copy; {new Date().getFullYear()} GDPAC. All rights reserved.
             </span>
             <span>
-              Built as a demo analytics interface for governance and development
+              Built as a analytics interface for governance and development
               performance in Nigeria.
             </span>
           </div>
